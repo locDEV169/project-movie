@@ -1,16 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 import Header from "./Components/Header/Header";
 import Content from "./Components/Home/Content";
-import ViewMorePage from "./page/ViewMore/ViewMorePage";
+import WatchTv from "./Components/Watch/Watch";
+import WatchMovie from "./Components/Watch/WatchMovie";
 import DetailsMovie from "./page/Details/Details";
 import Search from "./page/Search/Search";
 import SearchResults from "./page/Search/SearchResults";
-import WatchTv from "./Components/Watch/Watch";
-import WatchMovie from "./Components/Watch/WatchMovie";
-import Footer from "./Components/Footer/Footer";
-import "./App.css";
+import ViewMorePage from "./page/ViewMore/ViewMorePage";
 import "./Responsive.css";
+
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
           />
           <Route path="/watch/movie/:id" element={<WatchMovie />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
