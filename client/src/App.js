@@ -5,6 +5,7 @@ import Content from "./Components/Home/Content";
 import WatchTv from "./Components/Watch/Watch";
 import WatchMovie from "./Components/Watch/WatchMovie";
 import DetailsMovie from "./page/Details/Details";
+import LoginPage from "./page/login/login";
 import Search from "./page/Search/Search";
 import SearchResults from "./page/Search/SearchResults";
 import ViewMorePage from "./page/ViewMore/ViewMorePage";
@@ -27,6 +28,7 @@ function App() {
             element={<WatchTv />}
           />
           <Route path="/watch/movie/:id" element={<WatchMovie />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>
