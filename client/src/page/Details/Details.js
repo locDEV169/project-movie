@@ -63,7 +63,9 @@ function DetailsMovie() {
             </div>
             <div className="details-info">
               <h1 className="details-info-title">{data.name || data.title}</h1>
+              <h3 className="details-overview" style={{textDecoration: "uppercase"}}>overview</h3>
               <p className="details-info-overview">{data.overview}</p>
+              <p className="details-info-overview" style={{color: 'red'}}>{data.director}</p>
               <p className="release_date">
                 {data.release_date
                   ? `Release date: ${data.release_date}`
