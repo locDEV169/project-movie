@@ -50,3 +50,32 @@
     justify-content: center;
     align-items: center;
 }
+.dropdown{
+    display: flex;
+}
+.dropdown button{
+    color: #ffff;
+    background-color: red;
+}
+.dropdown .show {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    /* inset: 0px auto auto 0px; */
+    transform: translate3d(711.2px, 56px, 0px);
+    width: 100px;
+    height: 120px;
+    background-color: white;
+}
+
+.dropdown-menu {
+    display: none;
+}
+.dropdown-item{
+    font-size: 20px;
+    margin: 10px 10px;
+    background-color: #333;
+    /* border: 1px solid red; */
+}
