@@ -19,8 +19,8 @@ mongoose
     useUnifiedTopology: true,
     //useCreateIndex: true,
   })
-  .then(() => console.log("DB success connect "))
-  .catch((err) => console.log(err));
+  // .then(() => console.log("DB success connect "))
+  // .catch((err) => console.log(err));
 
 app.use(express.json());
 app.use(cors());
@@ -31,5 +31,5 @@ app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
 app.listen(port, () => {
-  console.log(`BE server running is  ${port} `);
+  // console.log(`BE server running is  ${port} `);
 });
