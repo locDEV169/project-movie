@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API_URL } from "../../constans";
 import "./login.scss";
 
@@ -9,7 +9,8 @@ const api = Axios.create({
 });
 
 export default function LoginPage() {
-    // const location = useLocation();
+    // const href = useHref();
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
@@ -53,8 +54,8 @@ export default function LoginPage() {
                     localStorage.setItem("isLogin", JSON.stringify(true))
                     localStorage.setItem("user", JSON.stringify(res.data));
                     alert("Login Success");
+                    navigate('/');
                     window.location.reload();
-                    // location.push("/");
                 })
                 .catch((res) => {
                     console.log('catch')
