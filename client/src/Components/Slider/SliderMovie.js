@@ -60,7 +60,7 @@ const SliderMovie = ({ type }) => {
   return (
     <div className="slider">
       <div className="title">
-        <h1>Movie {type}</h1>
+        <h1 style={{textTransform: 'capitalize'}}>Movie {type}</h1>
         <Link to={`/movie/${type}`}>
           <Button content="View more" />
         </Link>
