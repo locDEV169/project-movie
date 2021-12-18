@@ -34,9 +34,10 @@
         align-items: center;
         justify-content: center;
         color: white;
+
         form {
             width: 380px;
-            height: 400px;
+            height: 450px;
             padding: 30px;
             border-radius: 5px;
             background-color: #0b0b0b;
@@ -61,6 +62,77 @@
                 }
             }
 
+            button {
+                height: 40px;
+                border-radius: 5px;
+                background-color: red;
+                color: white;
+                border: none;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            span {
+                color: lightgray;
+                b {
+                    color: white;
+                }
+            }
+        }
+        .form__ant {
+            max-width: 380px;
+            height: 450px;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: #0b0b0b;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            opacity: 0.85;
+
+            .ant-form-item-required {
+                height: 40px;
+                border-radius: 5px;
+                color: white;
+                padding-left: 10px;
+            }
+            .ant-form-item-control-input-content {
+                h1 {
+                    display: flex;
+                    justify-content: space-evenly;
+                    text-transform: uppercase;
+                }
+                .ant-input {
+                    height: 40px;
+                    border-radius: 5px;
+                    background-color: gray;
+                    color: white;
+                    padding-left: 10px;
+                    &::placeholder {
+                        color: lightgray;
+                    }
+                }
+                .ant-input:hover {
+                    height: 40px;
+                    border-radius: 5px;
+                    background-color: gray;
+                    color: white;
+                    padding-left: 10px;
+                    &::placeholder {
+                        color: lightgray;
+                    }
+                }
+                .ant-input-password{
+                    border-radius: 5px;
+                    background-color: gray;
+                    color: white;
+                    padding-left: 10px;
+                    &::placeholder {
+                        color: lightgray;
+                    }
+                }
+            }
             button {
                 height: 40px;
                 border-radius: 5px;

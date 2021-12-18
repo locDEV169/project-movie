@@ -58,7 +58,7 @@ const SliderTv = ({ type }) => {
   return (
     <div className="slider">
       <div className="title">
-        <h1>TV {type}</h1>
+        <h1 style={{textTransform: 'capitalize'}}>TV {type}</h1>
         <Link to={`/tv/${type}`}>
           <Button content="View more" />
         </Link>

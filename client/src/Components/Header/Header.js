@@ -63,11 +63,11 @@ function Header() {
                     Hi {userInfor.username}
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu  style={{ backgroundColor: "#333" }}> 
-                    <Dropdown.Item >Update</Dropdown.Item>
-                    <Dropdown.Item onClick={logout}>
-                        Logout
-                    </Dropdown.Item>
+                <Dropdown.Menu style={{ backgroundColor: "#333" }}>
+                    <Dropdown.Item>Update</Dropdown.Item>
+                    <button style={{ backgroundColor: "#333" }} onClick={logout}>
+                        <Dropdown.Item style={{ backgroundColor: "#333" }}>Logout</Dropdown.Item>
+                    </button>
                 </Dropdown.Menu>
             </Dropdown>
         );
