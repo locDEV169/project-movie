@@ -87,16 +87,6 @@ function DetailsMovie() {
               </div>
 
               <div className="watch">
-                <Link
-                  className="watch-link"
-                  to={
-                    media_type === "tv"
-                      ? `/watch/tv/${id}/season/1/esp/1`
-                      : `/watch/movie/${id}`
-                  }
-                >
-                  Watch Now
-                </Link>
                 <span className="watch-link" onClick={() => setShowModal(true)}>
                   Watch Trailer
                 </span>

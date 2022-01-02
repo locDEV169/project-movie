@@ -64,7 +64,7 @@ function Header() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu style={{ backgroundColor: "#333" }}>
-                    <Dropdown.Item>Update</Dropdown.Item>
+                    <Dropdown.Item>Profile</Dropdown.Item>
                     <button style={{ backgroundColor: "#333" }} onClick={logout}>
                         <Dropdown.Item style={{ backgroundColor: "#333" }}>Logout</Dropdown.Item>
                     </button>
