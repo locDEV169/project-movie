@@ -4,8 +4,8 @@ import "antd/es/button/style/index.css";
 import { default as Form } from "antd/es/form";
 import "antd/es/form/style/index.css";
 import { default as Input } from "antd/es/input";
-import { default as message } from 'antd/es/message';
-import 'antd/es/message/style/index.css';
+import { default as message } from "antd/es/message";
+import "antd/es/message/style/index.css";
 import Axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,20 +21,19 @@ export default function RegisterPage() {
     const [form] = Form.useForm();
 
     const handleSubmit = (values) => {
-        console.log(values);
+        console.log(values.username);
         api.post("/auth/register", values)
-        .then((res) => {
-            localStorage.setItem("isLogin", JSON.stringify(true));
-            localStorage.setItem("user", JSON.stringify(res.data));
-            alert("Register Successful");
-            navigate("/login");
-            window.location.reload();
-        })
-        .catch((res) => {
-            console.log(res);
-            message.error('Invalid from username email or password');
-            message.error('Username already exists');
-        });
+            .then((res) => {
+                localStorage.setItem("isLogin", JSON.stringify(true));
+                localStorage.setItem("user", JSON.stringify(res.data));
+                alert("Register Successful");
+                navigate("/login");
+                window.location.reload();
+            })
+            .catch((res) => {
+                message.error("Invalid from username email or password");
+                message.error("Username already exists");
+            });
     };
 
     return (
@@ -50,11 +49,19 @@ export default function RegisterPage() {
                                 required: true,
                                 message: "Please input your username",
                             },
+                            {
+                                min: 3,
+                                // pattern: /^[a-zA-Z0-9]/,
+                                message: "Must be min 3 characters.",
+                            },
                         ]}
                     >
                         <Input
                             style={{ maxWidth: "320px" }}
                             placeholder="abc"
+                            onChange={(value) => {
+                                console.log(value.target.value);
+                            }}
                         />
                     </Form.Item>
                     <Form.Item
