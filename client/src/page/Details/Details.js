@@ -1,13 +1,14 @@
+import { default as Rate } from "antd/es/rate";
+import "antd/es/rate/style/index.css";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { API_KEY, BASE_URL } from "../../constans";
-import Button from "../../Components/Button/Button";
 import ReactStars from "react-rating-stars-component";
-import "./Details.css";
-import { Link } from "react-router-dom";
-import Cast from "../Cast/Cast";
+import { useParams } from "react-router";
+import Button from "../../Components/Button/Button";
 import Simular from "../../Components/Simular/Simular";
 import ModalTrailer from "../../Components/Trailer/ModalTrailer";
+import { API_KEY, BASE_URL } from "../../constans";
+import Cast from "../Cast/Cast";
+import "./Details.css";
 
 function DetailsMovie() {
   const param = useParams();
@@ -72,17 +73,16 @@ function DetailsMovie() {
                   : `Last episode: ${data.last_air_date}`}
               </p>
               <div className="genres">
+                  <ul>
                 {data.genres &&
                   data.genres.map((item) => (
-                    <Button key={item.id} content={item.name} />
+                    <li key={item.id}>{item.name}</li>
                   ))}
+                  </ul>
               </div>
               <div className="ratings">
-                <ReactStars
-                  count={data && data.vote_average}
-                  size={20}
-                  color="#f1c40f"
-                />{" "}
+                <Rate allowHalf count={10} value={data && data.vote_average} color="#f1c40f"/>
+                {" "}
                 <div className="ratings-count">{`(${data.vote_count} vote)`}</div>
               </div>
 

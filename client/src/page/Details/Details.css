@@ -61,7 +61,7 @@
   flex-wrap: wrap;
 }
 
-.genres .btn {
+.genres ul li {
   margin-right: 20px;
 }
 
