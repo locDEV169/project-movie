@@ -79,3 +79,34 @@
     background-color: #333;
     /* border: 1px solid red; */
 }
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  position: relative;
+}
+.search-text {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    width: 400px;
+    max-width: calc(100vw - 32px);
+    /* font-size: 20px; */
+}.search-submit {
+    height: 77%;
+    width: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #fff;
+    background-color: #e74c3c;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}

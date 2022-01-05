@@ -93,6 +93,11 @@ export default function RegisterPage() {
                                 required: true,
                                 message: "Please input your password!",
                             },
+                            {
+                                min: 3,
+                                // pattern: /^[a-zA-Z0-9]/,
+                                message: "Must be min 3 characters.",
+                            },
                         ]}
                     >
                         <Input.Password

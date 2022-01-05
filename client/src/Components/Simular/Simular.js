@@ -63,6 +63,7 @@ const Simular = () => {
       <div className="title">
         <h1>Similar</h1>
       </div>
+      
       <Swiper
         navigation
         grabCursor={true}
