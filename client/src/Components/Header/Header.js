@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { default as message } from "antd/es/message";
+import "antd/es/message/style/index.css";
+import React, { useEffect, useRef, useState } from "react";
 import Dropdown from "react-bootstrap/dropdown";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
@@ -22,7 +23,8 @@ function Header() {
       window.location.reload()
     }
     else {
-        document.getElementById("search-text").placeholder = "Nhap du lieu di mat loz";
+        // document.getElementById("search-text").placeholder = "please enter search character";
+        message.error("please enter search character");
     }
   };
 
