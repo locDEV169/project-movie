@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Skeleton from "../../Components/Skeleton/Skeleton";
@@ -45,7 +46,7 @@ function SearchResults() {
       <div className="searchResults">
         <h1 className="searchResults-title">Results for {`"${keyword}"`}</h1>
         <div className="searchResults-container">
-          { results.length>0 ? (
+          { results.length > 0 ? (
             results.map((result) => (
               <Link
                 key={result.id}
@@ -68,11 +69,11 @@ function SearchResults() {
             ))
           ) : (
             <>
-            <div>Deo co du</div>
+            <div className='searchResults-title' ><i className="far fa-folder-open" style={{size: 20}}></i> No data</div>
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
               {/* <Skeleton />
-              <Skeleton />
-              <Skeleton />
-              <Skeleton />
               <Skeleton />
               <Skeleton />
               <Skeleton />

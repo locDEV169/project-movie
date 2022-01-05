@@ -35,7 +35,8 @@
 .header-login {
     font-size: 16px;
     margin-right: 30px;
-    width: 100px;
+    width: 120px;
+    height: 36px;
     color: #ffff;
     background-color: red;
     border-radius: 10px;
