@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/dropdown";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import "./Search.css";
 
 function Header() {
   const hederRef = useRef(null);
@@ -60,7 +59,7 @@ function Header() {
             id="search-text"
             type="text"
           />
-          <input className="search-submit" type="submit" value="Search" />
+          <button className="search-submit"><i class="fas fa-search"></i></button>
         </div>
       </form>
       <div className="header-left">
