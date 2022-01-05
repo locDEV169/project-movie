@@ -21,6 +21,7 @@ function SearchResults() {
   };
 
   useEffect(() => {
+
     const searchKeywordforUser = (keyword) => {
       fetch(
         `${BASE_URL}/search/multi?api_key=${API_KEY}&query=${keyword}&page=${page}`
@@ -44,7 +45,7 @@ function SearchResults() {
       <div className="searchResults">
         <h1 className="searchResults-title">Results for {`"${keyword}"`}</h1>
         <div className="searchResults-container">
-          {!loading ? (
+          { results.length>0 ? (
             results.map((result) => (
               <Link
                 key={result.id}
@@ -67,6 +68,8 @@ function SearchResults() {
             ))
           ) : (
             <>
+            <div>Deo co du</div>
+              {/* <Skeleton />
               <Skeleton />
               <Skeleton />
               <Skeleton />
@@ -75,8 +78,7 @@ function SearchResults() {
               <Skeleton />
               <Skeleton />
               <Skeleton />
-              <Skeleton />
-              <Skeleton />
+              <Skeleton /> */}
             </>
           )}
         </div>

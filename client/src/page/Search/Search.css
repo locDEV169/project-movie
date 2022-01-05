@@ -1,4 +1,4 @@
-.search {
+/* .search {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,9 @@
 
 .search-input {
   position: relative;
-}
+} */
 
-.search-text {
+/* .search-text {
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 8px;
@@ -21,13 +21,13 @@
   width: 400px;
   max-width: calc(100vw - 32px);
   font-size: 20px;
-}
+} */
 
 .search-text::placeholder {
   color: #fff;
 }
 
-.search-submit {
+/* .search-submit {
   height: 100%;
   width: 60px;
   border-top-right-radius: 8px;
@@ -38,7 +38,7 @@
   right: 0;
   color: #fff;
   font-size: 16px;
-}
+} */
 
 .searchResults {
   margin: 40px 0;
