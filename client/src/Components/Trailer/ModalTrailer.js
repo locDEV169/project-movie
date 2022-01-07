@@ -21,6 +21,7 @@ function ModalTrailer({ show, setShow }) {
     };
 
     getTrailer(media_type, id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
