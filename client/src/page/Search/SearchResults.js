@@ -15,6 +15,7 @@ function SearchResults() {
 
   const [totalPage, setTotalPage] = useState();
 
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(true);
 
   const LoadMore = () => {
